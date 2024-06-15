@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body{
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+}
+html{
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+}
+.container-fluid{
+    padding: 0 40px;
+}
+::placeholder{
+    color: #060608 !important;
+}
+.bg-dark{
+    background-color: #060608 !important;
+}
+.searchbar-content{
+    background-color: #F5F5F5;
+    border: 3px solid #BDBDBD;
+}
+.searchbar-content{
+    background-color: #F5F5F5;
+    border: 3px solid #BDBDBD;
+    border-radius: 30px;
+    padding: 5px 10px !important;
+}
+.search-icon {
+    min-width: 30px;
+    height: 30px;
+}
+.search-icon img{
+ width: 20px;
+}
+.form-control:focus, .form-select:focus{
+    border-color: none;
+    outline: 0;
+    box-shadow: none;
+}
+.form-select:focus{
+    border-color: transparent;
+    outline: 0;
+    box-shadow: none;
+}
+.hamburger-menu a img{
+    width: 40px;
+}
+.hero-section{
+    height: 100vh;
+    max-height: calc(100vh - 121px);
+}
+
+.card-content{
+    margin-left: -40px;
+    padding: 40px; 
+    background-color: #202025;
+}
+button#filterButton {
+    height: 58px;
+    width: 100%;
+    max-width: 100px;
+    background: #3F3F40;
+    border: none;
+    border-radius: 0;
+}
+.gallery-row{
+    height:100vh; 
+    max-height: calc(100vh - 121px);
+    overflow-y: scroll;
+}
+.gallery-row::before, .gallery-row::after{
+    top: 0;
+    right: -8px;
+    content: url(../images/arrow-top.png);
+    background-size: contain;
+    position: absolute;
+    color: #fff;
+    width: 20px;
+    height: 33px;
+}
+.gallery-row::after {
+    bottom: 0;
+    top: unset;
+    transform: rotate(180deg);
+}
+.gallery-row::-webkit-scrollbar {
+    width: 5px;
+}
+
+.gallery-row::-webkit-scrollbar-track {
+    background-color: #fff;
+    margin: 30px 0;
+    border-left: 2px solid rgb(0, 0, 0);
+    border-right: 2px solid rgb(0, 0, 0);
+
+}
+
+.gallery-row::-webkit-scrollbar-thumb {
+    background: #fcfcfc;
+    -webkit-box-shadow: inset 0 0 px #ffffff ;
+}
+
+.gallery-row::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+.card{
+    min-height: 285px;
+}
+.card img{
+    height: 100%;
+    object-fit: cover;
+    max-height: 252px;
+    border: 2px solid #fff;
+}
+
+.gallery-item{
+    display: flex;
+}
+select option {
+    background: rgb(0, 0, 0);
+    color: #fff;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
+}
+.menu{
+    background-color: #EBEBEC;
+    position: relative;
+}
+
+.menu-tag {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 104px;
+    position: absolute;
+    top: 90px;
+    left: -30px;
+    transform: rotate(-90deg);
+    font-weight: bold;
+}
+
+span.bar {
+    width: 50px;
+    height: 1px;
+    background: rgb(0, 0, 0);
+}
+.menu-link{
+    display: inline-block;
+    position: relative;
+    color: #060608;
+    padding-bottom: 2px;
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+.menu-link::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 0;
+    background-color: #060608;
+    transition: 0.5s all;
+}
+.menu-link:hover::after{
+    width: 100%;
+}
+
+
+@media screen and (max-width: 768px) {
+    .hero-section{
+        height: auto;
+        min-height: 100vh;
+        max-height: unset;
+    }
+    .card-content {
+        margin-right: -40px;
+    }
+    a.site-logo img {
+        max-width: 130px;
+    }
+}
+@media screen and (max-width: 490px) {
+    button#filterButton {
+        max-width: 60px;
+    }
+}
